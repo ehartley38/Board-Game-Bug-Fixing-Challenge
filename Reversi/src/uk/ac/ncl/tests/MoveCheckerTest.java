@@ -30,9 +30,8 @@ class MoveCheckerTest {
                     tempEl.setValue( CellStatus.LIGHT);
                 } else if ((i == 4 && j == 4) || (i == 3 && j == 3)) {
                     tempEl.setValue( CellStatus.DARK);
-                } else {
-                    cells[i][j] = tempEl;
                 }
+                cells[i][j] = tempEl;
             }
         }
     }

@@ -122,12 +122,13 @@ public class Cell {
             int temp_score = 0;
             int d_row = this.getRow() + dir[0];
             int d_col = this.getColumn() + dir[1];
+            System.out.println(d_row + "" + d_col);
             if (0 <= d_col &&  d_col < BOARD_SIZE && 0 <=  d_row && d_row < BOARD_SIZE
                     && cells[d_row][d_col].getValue() != CellStatus.EMPTY
                     && cells[d_row][d_col].getValue() == opponent) {
                 while (true){
                     d_row += dir[0];
-                    d_col += dir[0];
+                    d_col += dir[1];
                     temp_score += 1;
                     if (0 <= d_col &&  d_col < BOARD_SIZE && 0 <=  d_row
                             && cells[d_row][d_col].getValue() != CellStatus.EMPTY){
