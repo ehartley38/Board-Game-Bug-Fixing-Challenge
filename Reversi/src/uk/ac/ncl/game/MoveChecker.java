@@ -56,8 +56,6 @@ public class MoveChecker {
             int[] dir = move.getDirection();
             int d_row = cell.getRow();
             int d_col = cell.getColumn();
-
-            System.out.println(d_row + " " + d_col);
             while (d_col != move.getCell().getColumn() || d_row != move.getCell().getRow()) {
                 cells[d_row][d_col].setValue(colour);
                 d_row += dir[0];
@@ -109,7 +107,7 @@ public class MoveChecker {
         int darks = 0;
         for (int row = 0; row < BOARD_SIZE; row++) {
             for (int column = 0; column < BOARD_SIZE; column++) {
-                if (this.cells[column][row].getValue() == CellStatus.LIGHT){
+                if (this.cells[row][column].getValue() == CellStatus.LIGHT){
                     lights++;
                 } else if (this.cells[row][column].getValue() == CellStatus.DARK){
                     darks++;
